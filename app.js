@@ -3,7 +3,7 @@ const express = require('express')
 const dbConnect = require("./config/dbConnect");
 const dotenv = require('dotenv');
 const app = express()
-const PORT =  5000;
+const PORT =  process.env.PORT||5000;
 var cors = require('cors');
 var cookieParser = require('cookie-parser')
 // require("./config/dbConnect");
