@@ -83,6 +83,16 @@ router.post("/new-user", async (req, res) => {
 });
 
 
+router.get("/users-data",async (req,res)=>{
+    try{
+    const users=await newRegister.find({});
+    res.send(users);
+    }
+    catch(e){
+      res.send(e);
+    }
+})
+
 router.post("/new-login", async (req, res) => {
   try {
     const user = await newUser.findByCredentials(
