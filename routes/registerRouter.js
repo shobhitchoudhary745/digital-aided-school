@@ -99,8 +99,10 @@ router.post("/new-login", async (req, res) => {
       req.body.email,
       req.body.password
     );
+    
     res.send(user);
-  } catch (e) {
+  }
+  catch (e) {
     res.status(400).send();
   }
 });
